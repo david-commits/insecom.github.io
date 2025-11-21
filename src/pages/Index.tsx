@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Navbar } from "@/components/Navbar";
 import { ServiceCard } from "@/components/ServiceCard";
 import { ValueCard } from "@/components/ValueCard";
 import { PortfolioCard } from "@/components/PortfolioCard";
@@ -27,6 +28,9 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Navigation */}
+      <Navbar />
+      
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div 
@@ -69,7 +73,7 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-24 bg-background">
+      <section id="servicios" className="py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
@@ -106,7 +110,7 @@ const Index = () => {
       </section>
 
       {/* Value Proposition Section */}
-      <section className="py-24 bg-muted">
+      <section id="nosotros" className="py-24 bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
