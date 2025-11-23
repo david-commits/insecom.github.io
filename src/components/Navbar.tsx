@@ -63,9 +63,9 @@ export const Navbar = () => {
               <Link
                 key={item.label}
                 to={item.path}
-                className={`font-medium transition-colors hover:text-corporate-primary ${
+                className={`font-medium transition-colors hover:text-tertiary ${
                   location.pathname === item.path 
-                    ? "text-corporate-primary font-semibold" 
+                    ? "text-tertiary font-semibold" 
                     : isScrolled ? "text-foreground" : "text-white"
                 }`}
               >
@@ -99,7 +99,7 @@ export const Navbar = () => {
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={`text-left px-4 py-2 rounded-md transition-colors font-medium ${
                     location.pathname === item.path
-                      ? "text-corporate-primary bg-muted font-semibold"
+                      ? "text-tertiary bg-muted font-semibold"
                       : "text-foreground hover:bg-muted"
                   }`}
                 >
