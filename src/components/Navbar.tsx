@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,31 +15,11 @@ export const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      const offset = 80;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
-      setIsMobileMenuOpen(false);
-    }
-  };
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    setIsMobileMenuOpen(false);
-  };
-
   const navItems = [
-    { label: "Inicio", action: scrollToTop },
-    { label: "Nosotros", action: () => scrollToSection("nosotros") },
-    { label: "Productos y Servicios", action: () => scrollToSection("servicios") },
-    { label: "Contacto", action: () => scrollToSection("contact") },
+    { label: "Inicio", path: "/" },
+    { label: "Nosotros", path: "/nosotros" },
+    { label: "Productos y Servicios", path: "/productos-servicios" },
+    { label: "Contacto", path: "/contacto" },
   ];
 
   return (
@@ -52,32 +33,45 @@ export const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <button
-            onClick={scrollToTop}
-            className="text-xl md:text-2xl font-bold text-primary hover:text-secondary transition-colors"
-          >
-            Ingeniería & Comunicaciones
-          </button>
+          <Link to="/" className="flex items-center hover:opacity-80 transition-opacity">
+            <svg 
+              width="48" 
+              height="48" 
+              viewBox="0 0 48 48" 
+              fill="none" 
+              xmlns="http://www.w3.org/2000/svg"
+              className={isScrolled ? "text-corporate-primary" : "text-white"}
+            >
+              <path 
+                d="M24 4L4 14V34L24 44L44 34V14L24 4Z" 
+                stroke="currentColor" 
+                strokeWidth="2" 
+                strokeLinejoin="round"
+              />
+              <path 
+                d="M24 4V44M4 14L44 34M44 14L4 34" 
+                stroke="currentColor" 
+                strokeWidth="2"
+              />
+              <circle cx="24" cy="24" r="6" fill="currentColor" />
+            </svg>
+          </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
-              <button
+              <Link
                 key={item.label}
-                onClick={item.action}
-                className={`font-medium transition-colors hover:text-primary ${
-                  isScrolled ? "text-foreground" : "text-white"
+                to={item.path}
+                className={`font-medium transition-colors hover:text-corporate-primary ${
+                  location.pathname === item.path 
+                    ? "text-corporate-primary font-semibold" 
+                    : isScrolled ? "text-foreground" : "text-white"
                 }`}
               >
                 {item.label}
-              </button>
+              </Link>
             ))}
-            <Button
-              onClick={() => scrollToSection("contact")}
-              className="bg-primary hover:bg-secondary text-primary-foreground font-semibold"
-            >
-              Cotizar Proyecto
-            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -99,22 +93,19 @@ export const Navbar = () => {
           <div className="md:hidden py-4 bg-card border-t border-border">
             <div className="flex flex-col gap-4">
               {navItems.map((item) => (
-                <button
+                <Link
                   key={item.label}
-                  onClick={item.action}
-                  className="text-left px-4 py-2 text-foreground hover:bg-muted rounded-md transition-colors font-medium"
+                  to={item.path}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={`text-left px-4 py-2 rounded-md transition-colors font-medium ${
+                    location.pathname === item.path
+                      ? "text-corporate-primary bg-muted font-semibold"
+                      : "text-foreground hover:bg-muted"
+                  }`}
                 >
                   {item.label}
-                </button>
+                </Link>
               ))}
-              <div className="px-4">
-                <Button
-                  onClick={() => scrollToSection("contact")}
-                  className="w-full bg-primary hover:bg-secondary text-primary-foreground font-semibold"
-                >
-                  Cotizar Proyecto
-                </Button>
-              </div>
             </div>
           </div>
         )}
