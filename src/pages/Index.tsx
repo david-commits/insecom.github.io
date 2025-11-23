@@ -170,27 +170,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Clients Section */}
-      <section className="py-24 bg-muted">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Trabajamos con Líderes
-            </h2>
-          </div>
-
-          <div className="flex flex-wrap justify-center items-center gap-12 max-w-5xl mx-auto">
-            {[1, 2, 3, 4, 5, 6].map((i) => (
-              <div 
-                key={i}
-                className="w-40 h-20 bg-card border border-border rounded-lg flex items-center justify-center text-muted-foreground font-semibold hover:border-tertiary transition-colors"
-              >
-                Cliente {i}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Contact Section */}
       <section id="contact" className="py-24 bg-gradient-to-br from-primary via-secondary to-tertiary">

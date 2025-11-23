@@ -1,6 +1,15 @@
 import { Navbar } from "@/components/Navbar";
 import { ValueCard } from "@/components/ValueCard";
-import { Shield, Award, Target, Users, Lightbulb, TrendingUp } from "lucide-react";
+import { Shield, Award, Target, Users, Lightbulb, TrendingUp, ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
 
 const Nosotros = () => {
   return (
@@ -8,12 +17,36 @@ const Nosotros = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 bg-primary">
-        <div className="container mx-auto max-w-6xl">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+      <section className="relative pt-32 pb-20 px-4 overflow-hidden">
+        {/* Animated gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary via-secondary to-tertiary">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-tertiary/20 via-transparent to-transparent"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-secondary/20 via-transparent to-transparent"></div>
+          {/* Tech grid pattern */}
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.05)_1px,transparent_1px)] bg-[size:64px_64px]"></div>
+        </div>
+        
+        <div className="container mx-auto max-w-6xl relative z-10">
+          <Breadcrumb className="mb-6">
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink asChild>
+                  <Link to="/" className="text-white/70 hover:text-white">Inicio</Link>
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator className="text-white/50">
+                <ChevronRight />
+              </BreadcrumbSeparator>
+              <BreadcrumbItem>
+                <BreadcrumbPage className="text-white font-semibold">Nosotros</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+          
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
             Sobre Nosotros
           </h1>
-          <p className="text-xl text-white/90 max-w-3xl">
+          <p className="text-xl text-white/90 max-w-3xl animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100">
             Somos un equipo de ingenieros especializados en soluciones de infraestructura tecnológica crítica, 
             con más de 15 años de experiencia en el sector B2B.
           </p>
@@ -100,8 +133,8 @@ const Nosotros = () => {
           </p>
           
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-24 h-24 bg-gradient-corporate rounded-full mx-auto mb-4 flex items-center justify-center">
+            <div className="text-center group">
+              <div className="w-24 h-24 bg-gradient-to-br from-tertiary to-secondary rounded-full mx-auto mb-4 flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-105 transition-all duration-300">
                 <Users className="w-12 h-12 text-white" />
               </div>
               <h3 className="text-xl font-bold text-foreground mb-2">Ingenieros Especializados</h3>
@@ -109,8 +142,8 @@ const Nosotros = () => {
                 Certificados en las principales marcas y tecnologías del mercado
               </p>
             </div>
-            <div className="text-center">
-              <div className="w-24 h-24 bg-gradient-corporate rounded-full mx-auto mb-4 flex items-center justify-center">
+            <div className="text-center group">
+              <div className="w-24 h-24 bg-gradient-to-br from-secondary to-primary rounded-full mx-auto mb-4 flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-105 transition-all duration-300">
                 <Shield className="w-12 h-12 text-white" />
               </div>
               <h3 className="text-xl font-bold text-foreground mb-2">Gestión de Proyectos</h3>
@@ -118,8 +151,8 @@ const Nosotros = () => {
                 Experiencia en proyectos complejos con metodologías ágiles
               </p>
             </div>
-            <div className="text-center">
-              <div className="w-24 h-24 bg-gradient-corporate rounded-full mx-auto mb-4 flex items-center justify-center">
+            <div className="text-center group">
+              <div className="w-24 h-24 bg-gradient-to-br from-tertiary via-secondary to-primary rounded-full mx-auto mb-4 flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-105 transition-all duration-300">
                 <Award className="w-12 h-12 text-white" />
               </div>
               <h3 className="text-xl font-bold text-foreground mb-2">Soporte Técnico</h3>
