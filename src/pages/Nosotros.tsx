@@ -8,7 +8,7 @@ const Nosotros = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 bg-gradient-to-br from-corporate-primary via-corporate-secondary to-corporate-tertiary">
+      <section className="pt-32 pb-20 px-4 bg-primary">
         <div className="container mx-auto max-w-6xl">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Sobre Nosotros
