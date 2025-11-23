@@ -1,22 +1,15 @@
 import { Navbar } from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 
 const Contacto = () => {
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission logic here
-    console.log("Form submitted");
-  };
 
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 bg-gradient-to-br from-corporate-primary via-corporate-secondary to-corporate-tertiary">
+      <section className="pt-32 pb-20 px-4 bg-primary">
         <div className="container mx-auto max-w-6xl">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Contacto
@@ -29,86 +22,8 @@ const Contacto = () => {
 
       {/* Contact Section */}
       <section className="py-20 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-12">
-            {/* Contact Form */}
-            <div>
-              <h2 className="text-3xl font-bold text-foreground mb-6">
-                Inicia tu Próximo Proyecto con Nosotros
-              </h2>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
-                    Nombre Completo *
-                  </label>
-                  <Input
-                    id="name"
-                    type="text"
-                    placeholder="Tu nombre"
-                    required
-                    className="w-full"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                    Email Corporativo *
-                  </label>
-                  <Input
-                    id="email"
-                    type="email"
-                    placeholder="tu@empresa.com"
-                    required
-                    className="w-full"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
-                    Teléfono
-                  </label>
-                  <Input
-                    id="phone"
-                    type="tel"
-                    placeholder="(51) 9XX-XXX-XXX"
-                    className="w-full"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-foreground mb-2">
-                    Empresa
-                  </label>
-                  <Input
-                    id="company"
-                    type="text"
-                    placeholder="Nombre de tu empresa"
-                    className="w-full"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                    Mensaje *
-                  </label>
-                  <Textarea
-                    id="message"
-                    placeholder="Cuéntanos sobre tu proyecto..."
-                    required
-                    rows={5}
-                    className="w-full"
-                  />
-                </div>
-                
-                <Button 
-                  type="submit" 
-                  className="w-full bg-corporate-primary hover:bg-corporate-secondary text-white font-semibold"
-                >
-                  Enviar Consulta
-                </Button>
-              </form>
-            </div>
-
+        <div className="container mx-auto max-w-4xl">
+          <div className="max-w-2xl mx-auto">
             {/* Contact Information */}
             <div className="space-y-8">
               <div>
