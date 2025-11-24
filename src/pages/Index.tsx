@@ -5,7 +5,7 @@ import { ValueCard } from "@/components/ValueCard";
 import { PortfolioCard } from "@/components/PortfolioCard";
 import { 
   Cable, 
-  Server, 
+  Camera, 
   Shield, 
   Flame,
   Award,
@@ -91,9 +91,9 @@ const Index = () => {
               description="Certificación de redes de fibra óptica y cobre de Categoría 6A y superior."
             />
             <ServiceCard
-              icon={Server}
-              title="Data Centers Modulares"
-              description="Diseño y construcción de salas de servidores de alta disponibilidad y eficiencia."
+              icon={Camera}
+              title="CCTV (Circuito Cerrado de Televisión)"
+              description="Implementación de sistemas de CCTV análogos e IP. Instalación de cámaras Fijas, Minidomo y PTZ con conexión vía fibra óptica. Marcas: AXIS, ACTI, PELCO. Software VMS: MILESTONE, GENETEC."
             />
             <ServiceCard
               icon={Shield}
@@ -150,21 +150,26 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
             <PortfolioCard
-              image={projectDataCenter}
-              title="Data Center para Municipalidad X"
+              image={projectNetwork}
+              title="Cableado Estructurado y Redes"
               year="2024"
             />
             <PortfolioCard
-              image={projectNetwork}
-              title="Red de Fibra Óptica para Corporación Y"
+              image={projectSecurity}
+              title="CCTV (Circuito Cerrado de Televisión)"
+              year="2024"
+            />
+            <PortfolioCard
+              image={projectDataCenter}
+              title="Seguridad Electrónica"
               year="2023"
             />
             <PortfolioCard
               image={projectSecurity}
-              title="Sistema CCTV Industrial para Constructora Z"
-              year="2022"
+              title="Detección y Supresión de Incendio"
+              year="2023"
             />
           </div>
         </div>
@@ -229,7 +234,7 @@ const Index = () => {
       <footer className="bg-primary text-white py-8">
         <div className="container mx-auto px-4 text-center">
           <p className="text-white/80">
-            © 2024 Ingeniería y Comunicaciones. Todos los derechos reservados.
+            © {new Date().getFullYear()} Ingeniería y Comunicaciones. Todos los derechos reservados.
           </p>
         </div>
       </footer>
