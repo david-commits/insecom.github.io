@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Navbar } from "@/components/Navbar";
+import { Link } from "react-router-dom";
 import { ServiceCard } from "@/components/ServiceCard";
 import { ValueCard } from "@/components/ValueCard";
 import { PortfolioCard } from "@/components/PortfolioCard";
@@ -20,6 +21,7 @@ import heroImage from "@/assets/hero-engineering.jpg";
 import projectDataCenter from "@/assets/project-datacenter.jpg";
 import projectNetwork from "@/assets/project-network.jpg";
 import projectSecurity from "@/assets/project-security.jpg";
+import projectFireSuppression from "@/assets/project-fire-suppression.jpg";
 
 const Index = () => {
   const scrollToContact = () => {
@@ -167,7 +169,7 @@ const Index = () => {
               year="2023"
             />
             <PortfolioCard
-              image={projectSecurity}
+              image={projectFireSuppression}
               title="Detección y Supresión de Incendio"
               year="2023"
             />
@@ -219,13 +221,15 @@ const Index = () => {
               </div>
             </div>
 
-            <Button 
-              size="lg"
-              className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6 h-auto font-semibold shadow-xl"
-            >
-              Solicitar Consulta Gratuita
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
+            <Link to="/contacto">
+              <Button 
+                size="lg"
+                className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6 h-auto font-semibold shadow-xl"
+              >
+                Solicitar Consulta Gratuita
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -234,7 +238,7 @@ const Index = () => {
       <footer className="bg-primary text-white py-8">
         <div className="container mx-auto px-4 text-center">
           <p className="text-white/80">
-            © {new Date().getFullYear()} Ingeniería y Comunicaciones. Todos los derechos reservados.
+            © {new Date().getFullYear()} INSECOM. Todos los derechos reservados.
           </p>
         </div>
       </footer>
