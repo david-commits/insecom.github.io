@@ -1,6 +1,6 @@
 import { Navbar } from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
-import { Phone, Mail, MapPin, Clock, ChevronRight } from "lucide-react";
+import { Phone, Mail, MapPin, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import {
   Breadcrumb,
@@ -76,7 +76,7 @@ const Contacto = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Teléfono</h3>
-                    <p className="text-muted-foreground">(51) 9XX-XXX-XXX</p>
+                    <p className="text-muted-foreground">(51) - 998 933 319</p>
                   </div>
                 </div>
 
@@ -86,7 +86,7 @@ const Contacto = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Email</h3>
-                    <p className="text-muted-foreground">contacto@ingenieria.com</p>
+                    <p className="text-muted-foreground">insecom.peru@gmail.com</p>
                   </div>
                 </div>
 
@@ -103,18 +103,6 @@ const Contacto = () => {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-lg bg-gradient-corporate">
-                    <Clock className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground mb-1">Horario de Atención</h3>
-                    <p className="text-muted-foreground">
-                      Lunes a Viernes: 8:00 AM - 6:00 PM<br />
-                      Sábados: 9:00 AM - 1:00 PM
-                    </p>
-                  </div>
-                </div>
               </div>
 
               <div className="mt-8 p-6 bg-muted/30 rounded-lg">

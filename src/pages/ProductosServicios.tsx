@@ -1,6 +1,6 @@
 import { Navbar } from "@/components/Navbar";
 import { ServiceCard } from "@/components/ServiceCard";
-import { Network, Server, ShieldCheck, Flame, ChevronRight } from "lucide-react";
+import { Network, Camera, ShieldCheck, Flame, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import {
   Breadcrumb,
@@ -69,9 +69,9 @@ const ProductosServicios = () => {
               description="Certificación de redes de fibra óptica y cobre de Categoría 6A y superior. Implementación de infraestructura de red escalable y de alto rendimiento."
             />
             <ServiceCard
-              icon={Server}
-              title="Data Centers Modulares"
-              description="Diseño y construcción de salas de servidores de alta disponibilidad y eficiencia. Soluciones redundantes con sistemas de climatización y energía."
+              icon={Camera}
+              title="CCTV (Circuito Cerrado de Televisión)"
+              description="Implementación de sistemas de CCTV análogos e IP. Instalación de cámaras Fijas, Minidomo y PTZ (Pan-Tilt-Zoom) con conexión vía fibra óptica. Marcas: AXIS, ACTI, PELCO, AMERICAN DYNAMICS. Software VMS: MILESTONE, GENETEC, INTELLEX DVMS, NICE VISION."
             />
             <ServiceCard
               icon={ShieldCheck}
@@ -133,28 +133,28 @@ const ProductosServicios = () => {
               <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-secondary/10 to-transparent rounded-full blur-3xl group-hover:scale-150 transition-transform duration-500"></div>
               <div className="relative flex flex-col md:flex-row items-start gap-6">
                 <div className="p-4 rounded-xl bg-gradient-to-br from-secondary to-primary shadow-lg group-hover:scale-110 transition-transform duration-300">
-                  <Server className="w-10 h-10 text-white" />
+                  <Camera className="w-10 h-10 text-white" />
                 </div>
                 <div className="flex-1">
                   <h3 className="text-2xl font-bold text-foreground mb-3 group-hover:text-secondary transition-colors">
-                    Data Centers Modulares
+                    CCTV (Circuito Cerrado de Televisión)
                   </h3>
                   <p className="text-muted-foreground mb-6 leading-relaxed">
-                    Diseñamos y construimos salas de servidores con los más altos estándares de disponibilidad, 
-                    seguridad y eficiencia energética (Tier II, Tier III).
+                    Implementación de sistemas de CCTV análogos e IP. Instalación de cámaras Fijas, Minidomo y PTZ 
+                    (Pan-Tilt-Zoom) con conexión vía fibra óptica.
                   </p>
                   <ul className="space-y-3 text-muted-foreground">
                     <li className="flex items-start gap-3">
                       <span className="w-1.5 h-1.5 rounded-full bg-secondary mt-2 flex-shrink-0"></span>
-                      <span>Sistemas de climatización de precisión redundantes</span>
+                      <span><strong>Marcas/Plataformas Clave:</strong> Cámaras AXIS, ACTI, PELCO, AMERICAN DYNAMICS</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="w-1.5 h-1.5 rounded-full bg-secondary mt-2 flex-shrink-0"></span>
-                      <span>UPS y grupos electrógenos para alimentación ininterrumpida</span>
+                      <span><strong>Software VMS/Grabación:</strong> MILESTONE, GENETEC, INTELLEX DVMS, NICE VISION</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="w-1.5 h-1.5 rounded-full bg-secondary mt-2 flex-shrink-0"></span>
-                      <span>Sistemas de monitoreo y gestión ambiental 24/7</span>
+                      <span>Conexión vía fibra óptica para transmisión de video de alta calidad</span>
                     </li>
                   </ul>
                 </div>

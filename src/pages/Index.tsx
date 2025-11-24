@@ -189,7 +189,7 @@ const Index = () => {
                 </div>
                 <div>
                   <p className="font-semibold mb-1">Teléfono</p>
-                  <p className="text-white/80">(51) 9XX-XXX-XXX</p>
+                  <p className="text-white/80">(51) - 998 933 319</p>
                 </div>
               </div>
 
@@ -199,7 +199,7 @@ const Index = () => {
                 </div>
                 <div>
                   <p className="font-semibold mb-1">Email</p>
-                  <p className="text-white/80">contacto@ingenieria.com</p>
+                  <p className="text-white/80">insecom.peru@gmail.com</p>
                 </div>
               </div>
 
