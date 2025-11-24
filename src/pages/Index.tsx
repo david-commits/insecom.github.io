@@ -4,45 +4,29 @@ import { Link } from "react-router-dom";
 import { ServiceCard } from "@/components/ServiceCard";
 import { ValueCard } from "@/components/ValueCard";
 import { PortfolioCard } from "@/components/PortfolioCard";
-import { 
-  Cable, 
-  Camera, 
-  Shield, 
-  Flame,
-  Award,
-  Users,
-  CheckCircle2,
-  Phone,
-  Mail,
-  MapPin,
-  ArrowRight
-} from "lucide-react";
+import { Cable, Camera, Shield, Flame, Award, Users, CheckCircle2, Phone, Mail, MapPin, ArrowRight } from "lucide-react";
 import heroImage from "@/assets/hero-engineering.jpg";
 import projectDataCenter from "@/assets/project-datacenter.jpg";
 import projectNetwork from "@/assets/project-network.jpg";
 import projectSecurity from "@/assets/project-security.jpg";
 import projectFireSuppression from "@/assets/project-fire-suppression.jpg";
-
 const Index = () => {
   const scrollToContact = () => {
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('contact')?.scrollIntoView({
+      behavior: 'smooth'
+    });
   };
-
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       {/* Navigation */}
       <Navbar />
       
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div 
-          className="absolute inset-0 z-0"
-          style={{
-            backgroundImage: `url(${heroImage})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}
-        >
+        <div className="absolute inset-0 z-0" style={{
+        backgroundImage: `url(${heroImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+      }}>
           <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/85 to-secondary/80" />
         </div>
         
@@ -55,11 +39,7 @@ const Index = () => {
               Expertise en Cableado Estructurado, Data Centers y Seguridad Electrónica para proyectos corporativos y gubernamentales.
             </p>
             <div className="animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-300">
-              <Button 
-                size="lg" 
-                onClick={scrollToContact}
-                className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6 h-auto font-semibold shadow-xl hover:shadow-2xl transition-all"
-              >
+              <Button size="lg" onClick={scrollToContact} className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6 h-auto font-semibold shadow-xl hover:shadow-2xl transition-all">
                 Hablemos de tu Proyecto
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
@@ -87,26 +67,10 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <ServiceCard
-              icon={Cable}
-              title="Cableado Estructurado y Redes"
-              description="Certificación de redes de fibra óptica y cobre de Categoría 6A y superior."
-            />
-            <ServiceCard
-              icon={Camera}
-              title="CCTV (Circuito Cerrado de Televisión)"
-              description="Implementación de sistemas de CCTV análogos e IP. Instalación de cámaras Fijas, Minidomo y PTZ con conexión vía fibra óptica. Marcas: AXIS, ACTI, PELCO. Software VMS: MILESTONE, GENETEC."
-            />
-            <ServiceCard
-              icon={Shield}
-              title="Seguridad Electrónica"
-              description="Sistemas de videovigilancia IP y control de acceso de última generación."
-            />
-            <ServiceCard
-              icon={Flame}
-              title="Detección y Supresión de Incendio"
-              description="Sistemas certificados para proteger activos críticos."
-            />
+            <ServiceCard icon={Cable} title="Cableado Estructurado y Redes" description="Certificación de redes de fibra óptica y cobre de Categoría 6A y superior." />
+            <ServiceCard icon={Camera} title="CCTV (Circuito Cerrado de Televisión)" description="Implementación de sistemas de CCTV análogos e IP. Instalación de cámaras Fijas, Minidomo y PTZ con conexión vía fibra óptica. Marcas: AXIS, ACTI, PELCO. Software VMS: MILESTONE, GENETEC." />
+            <ServiceCard icon={Shield} title="Seguridad Electrónica" description="Sistemas de videovigilancia IP y control de acceso de última generación." />
+            <ServiceCard icon={Flame} title="Detección y Supresión de Incendio" description="Sistemas certificados para proteger activos críticos." />
           </div>
         </div>
       </section>
@@ -121,21 +85,9 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
-            <ValueCard
-              icon={Users}
-              title="Experiencia Comprobada"
-              description="Más de 15 años ejecutando proyectos de infraestructura B2B complejos."
-            />
-            <ValueCard
-              icon={Award}
-              title="Certificaciones de Marca"
-              description="Técnicos certificados en las principales marcas del sector."
-            />
-            <ValueCard
-              icon={CheckCircle2}
-              title="Enfoque en Calidad"
-              description="Garantía total en la instalación y puesta en marcha de sistemas."
-            />
+            <ValueCard icon={Users} title="Experiencia Comprobada" description="Más de 15 años ejecutando proyectos de infraestructura B2B complejos." />
+            <ValueCard icon={Award} title="Certificaciones de Marca" description="Técnicos certificados en las principales marcas del sector." />
+            <ValueCard icon={CheckCircle2} title="Enfoque en Calidad" description="Garantía total en la instalación y puesta en marcha de sistemas." />
           </div>
         </div>
       </section>
@@ -153,26 +105,10 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-            <PortfolioCard
-              image={projectNetwork}
-              title="Cableado Estructurado y Redes"
-              year="2024"
-            />
-            <PortfolioCard
-              image={projectSecurity}
-              title="CCTV (Circuito Cerrado de Televisión)"
-              year="2024"
-            />
-            <PortfolioCard
-              image={projectDataCenter}
-              title="Seguridad Electrónica"
-              year="2023"
-            />
-            <PortfolioCard
-              image={projectFireSuppression}
-              title="Detección y Supresión de Incendio"
-              year="2023"
-            />
+            <PortfolioCard image={projectNetwork} title="Cableado Estructurado y Redes" year="2024" />
+            <PortfolioCard image={projectSecurity} title="CCTV (Circuito Cerrado de Televisión)" year="2024" />
+            <PortfolioCard image={projectDataCenter} title="Seguridad Electrónica" year="2023" />
+            <PortfolioCard image={projectFireSuppression} title="Detección y Supresión de Incendio" year="2023" />
           </div>
         </div>
       </section>
@@ -222,10 +158,7 @@ const Index = () => {
             </div>
 
             <Link to="/contacto">
-              <Button 
-                size="lg"
-                className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6 h-auto font-semibold shadow-xl"
-              >
+              <Button size="lg" className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6 h-auto font-semibold shadow-xl mx-[20px]">
                 Solicitar Consulta Gratuita
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
@@ -242,8 +175,6 @@ const Index = () => {
           </p>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
