@@ -40,7 +40,7 @@ export const Navbar = () => {
               viewBox="0 0 48 48" 
               fill="none" 
               xmlns="http://www.w3.org/2000/svg"
-              className={isScrolled ? "text-corporate-primary" : "text-white"}
+              className={`animate-logo-pulse ${isScrolled ? "text-corporate-primary" : "text-white"}`}
             >
               <path 
                 d="M24 4L4 14V34L24 44L44 34V14L24 4Z" 
@@ -63,9 +63,9 @@ export const Navbar = () => {
               <Link
                 key={item.label}
                 to={item.path}
-                className={`font-medium transition-colors hover:text-tertiary ${
+                className={`font-medium transition-colors hover:text-active ${
                   location.pathname === item.path 
-                    ? "text-tertiary font-semibold" 
+                    ? "text-active font-semibold" 
                     : isScrolled ? "text-foreground" : "text-white"
                 }`}
               >
@@ -99,7 +99,7 @@ export const Navbar = () => {
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={`text-left px-4 py-2 rounded-md transition-colors font-medium ${
                     location.pathname === item.path
-                      ? "text-tertiary bg-muted font-semibold"
+                      ? "text-active bg-muted font-semibold"
                       : "text-foreground hover:bg-muted"
                   }`}
                 >

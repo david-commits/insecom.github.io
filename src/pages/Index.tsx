@@ -46,7 +46,7 @@ const Index = () => {
         
         <div className="container mx-auto px-4 z-10 relative">
           <div className="max-w-4xl mx-auto text-center text-white space-y-8">
-            <h1 className="text-5xl md:text-7xl font-bold leading-tight animate-in fade-in slide-in-from-bottom-4 duration-1000">
+            <h1 className="text-5xl md:text-7xl font-bold leading-tight animate-in fade-in slide-in-from-bottom-4 duration-1000 pt-8 md:pt-0">
               Soluciones de Ingeniería y Comunicaciones de Alto Rendimiento
             </h1>
             <p className="text-xl md:text-2xl text-white/90 leading-relaxed animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-200">
