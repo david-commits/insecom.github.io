@@ -104,29 +104,6 @@ const Contacto = () => {
                 </div>
 
               </div>
-
-              {/* Visual Decorative Elements */}
-              <div className="mt-12 grid grid-cols-2 gap-4">
-                <div className="p-6 rounded-lg bg-gradient-to-br from-primary/10 to-secondary/10 border border-primary/20">
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="w-2 h-2 rounded-full bg-gradient-corporate"></div>
-                    <h4 className="font-semibold text-foreground">Respuesta Rápida</h4>
-                  </div>
-                  <p className="text-sm text-muted-foreground">
-                    Atención inmediata a todas tus consultas técnicas
-                  </p>
-                </div>
-                
-                <div className="p-6 rounded-lg bg-gradient-to-br from-secondary/10 to-tertiary/10 border border-secondary/20">
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="w-2 h-2 rounded-full bg-gradient-corporate"></div>
-                    <h4 className="font-semibold text-foreground">Cobertura Nacional</h4>
-                  </div>
-                  <p className="text-sm text-muted-foreground">
-                    Proyectos en todo el territorio peruano
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
