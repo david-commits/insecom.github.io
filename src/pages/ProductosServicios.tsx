@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/Navbar";
 import { ServiceCard } from "@/components/ServiceCard";
+import Footer from "@/components/Footer";
 import { Network, Camera, ShieldCheck, Flame, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import {
@@ -230,12 +231,7 @@ const ProductosServicios = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-corporate-primary text-white py-8 px-4">
-        <div className="container mx-auto text-center">
-          <p>&copy; 2024 Ingeniería & Comunicaciones. Todos los derechos reservados.</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

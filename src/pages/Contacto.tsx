@@ -1,4 +1,5 @@
 import { Navbar } from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, MapPin, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -109,12 +110,7 @@ const Contacto = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-corporate-primary text-white py-8 px-4">
-        <div className="container mx-auto text-center">
-          <p>&copy; {new Date().getFullYear()} INSECOM. Todos los derechos reservados.</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
