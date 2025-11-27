@@ -125,7 +125,7 @@ const Index = () => {
               Nuestro equipo de ingeniería está listo para brindarte una solución a medida.
             </p>
 
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="grid md:grid-cols-3 gap-8 mb-16">
               <div className="flex flex-col items-center gap-3">
                 <div className="p-4 bg-white/10 rounded-full">
                   <Phone className="w-8 h-8" />
@@ -158,7 +158,7 @@ const Index = () => {
             </div>
 
             <Link to="/contacto">
-              <Button size="lg" className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6 h-auto font-semibold shadow-xl mx-[20px]">
+              <Button size="lg" className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6 h-auto font-semibold shadow-xl">
                 Solicitar Consulta Gratuita
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
