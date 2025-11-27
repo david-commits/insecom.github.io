@@ -157,12 +157,14 @@ const Index = () => {
               </div>
             </div>
 
-            <Link to="/contacto">
-              <Button size="lg" className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6 h-auto font-semibold shadow-xl">
-                Solicitar Consulta Gratuita
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-            </Link>
+            <div className="mt-12">
+              <Link to="/contacto">
+                <Button size="lg" className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6 h-auto font-semibold shadow-xl">
+                  Solicitar Consulta Gratuita
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
