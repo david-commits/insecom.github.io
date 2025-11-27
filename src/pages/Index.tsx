@@ -33,9 +33,7 @@ const Index = () => {
         <div className="container mx-auto px-4 z-10 relative">
           <div className="max-w-4xl mx-auto text-center text-white space-y-8">
             <h1 className="text-5xl md:text-7xl leading-tight animate-in fade-in slide-in-from-bottom-4 duration-1000 pt-20 md:pt-0 font-semibold">Insecom: Soluciones de Ingeniería y Comunicaciones</h1>
-            <p className="text-xl md:text-2xl text-white/90 leading-relaxed animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-200">
-              Expertise en Cableado Estructurado, Data Centers y Seguridad Electrónica para proyectos corporativos y gubernamentales.
-            </p>
+            <p className="text-xl md:text-2xl text-white/90 leading-relaxed animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-200">Expertos en cableado estructurado, CCTV, seguridad electrónica y supresión de incendios para proyectos corporativos y gubernamentales.</p>
             <div className="animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-300">
               <Button size="lg" onClick={scrollToContact} className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6 h-auto font-semibold shadow-xl hover:shadow-2xl transition-all">
                 Hablemos de tu Proyecto
