@@ -105,15 +105,27 @@ const Contacto = () => {
 
               </div>
 
-              <div className="mt-8 p-6 bg-muted/30 rounded-lg">
-                <h3 className="font-semibold text-foreground mb-2">¿Necesitas Soporte Urgente?</h3>
-                <p className="text-muted-foreground mb-4">
-                  Para emergencias técnicas o soporte 24/7 en proyectos activos, 
-                  contamos con líneas de atención prioritaria.
-                </p>
-                <Button variant="outline" className="w-full">
-                  Contactar Soporte
-                </Button>
+              {/* Visual Decorative Elements */}
+              <div className="mt-12 grid grid-cols-2 gap-4">
+                <div className="p-6 rounded-lg bg-gradient-to-br from-primary/10 to-secondary/10 border border-primary/20">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-2 h-2 rounded-full bg-gradient-corporate"></div>
+                    <h4 className="font-semibold text-foreground">Respuesta Rápida</h4>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    Atención inmediata a todas tus consultas técnicas
+                  </p>
+                </div>
+                
+                <div className="p-6 rounded-lg bg-gradient-to-br from-secondary/10 to-tertiary/10 border border-secondary/20">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-2 h-2 rounded-full bg-gradient-corporate"></div>
+                    <h4 className="font-semibold text-foreground">Cobertura Nacional</h4>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    Proyectos en todo el territorio peruano
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -123,7 +135,7 @@ const Contacto = () => {
       {/* Footer */}
       <footer className="bg-corporate-primary text-white py-8 px-4">
         <div className="container mx-auto text-center">
-          <p>&copy; 2024 Ingeniería & Comunicaciones. Todos los derechos reservados.</p>
+          <p>&copy; {new Date().getFullYear()} INSECOM. Todos los derechos reservados.</p>
         </div>
       </footer>
     </div>
